@@ -61,32 +61,45 @@
         
         .toc {
             margin: 14px 0 18px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
         }
         
         .chip {
-            display: block;
-            padding: 10px 12px;
-            border: 1px solid var(--border);
-            border-radius: 999px;
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid var(--accent);
+            border-radius: 20px;
             text-decoration: none;
             color: var(--fg);
             background: var(--chip);
             text-align: center;
             box-shadow: var(--shadow);
-            font-size: .95rem;
+            font-size: .8rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s ease;
         }
         
         .chip:hover {
-            filter: brightness(.98);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: var(--fg);
+            color: var(--bg);
         }
         
         .special-chip {
             background: linear-gradient(135deg, var(--accent), #ff8c42);
             color: white;
             border-color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .special-chip:hover {
+            background: linear-gradient(135deg, #e55a2b, #ff8c42);
+            color: white;
+            transform: translateY(-1px);
         }
         
         .day {
