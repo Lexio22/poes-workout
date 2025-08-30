@@ -6,414 +6,377 @@
   <title>7-Day Glute, Leg & Triceps Focused Military Workout</title>
   <style>
     :root {
-      --bg: #ffffff;
-      --fg: #0e0f12;
-      --muted: #4b5563;
-      --card: #ffffff;
-      --border: #e6e8ec;
-      --shadow: 0 1px 2px rgba(0,0,0,0.05);
-      --radius: 16px;
-      --chip: #f6f7f9;
-      --accent: #ff6b35;
+      --bg:#ffffff; --fg:#0e0f12; --muted:#4b5563; --card:#ffffff; --border:#e6e8ec;
+      --shadow:0 1px 2px rgba(0,0,0,.05); --radius:16px; --chip:#f6f7f9; --accent:#ff6b35;
     }
-
-    html, body {
-      background: var(--bg);
-      color: var(--fg);
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.55;
-    }
-
-    .wrap { max-width: 980px; margin: 0 auto; padding: 20px 14px 64px; }
-    header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--border); z-index: 5; }
-    header .inner { max-width: 980px; margin: 0 auto; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; }
-    h1 { font-size: 1.1rem; margin: 0; letter-spacing: .2px; }
-    .note { color: var(--muted); font-size: .9rem; }
-
-    .toc { margin: 14px 0 18px; display: flex; flex-wrap: wrap; gap: 6px; }
-    .chip {
-      display: inline-block; padding: 6px 12px; border: 1px solid var(--accent); border-radius: 20px;
-      text-decoration: none; color: var(--fg); background: var(--chip); text-align: center;
-      box-shadow: var(--shadow); font-size: .8rem; font-weight: 500; white-space: nowrap; transition: all 0.2s ease;
-    }
-    .chip:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.1); background: var(--fg); color: var(--bg); }
-    .special-chip { background: linear-gradient(135deg, var(--accent), #ff8c42); color: white; border-color: var(--accent); font-weight: 600; }
-    .special-chip:hover { background: linear-gradient(135deg, #e55a2b, #ff8c42); color: white; transform: translateY(-1px); }
-
-    .day {
-      border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
-      background: var(--card); padding: 14px; margin: 14px 0 20px;
-    }
-    .warmup { border-left: 4px solid var(--accent); background: linear-gradient(135deg, #fff5f2, #fff); }
-    .cooldown { border-left: 4px solid #4ade80; background: linear-gradient(135deg, #f0fdf4, #fff); }
-    .day h2 { font-size: 1.15rem; margin: 2px 0 4px; color: var(--fg); }
-    .warmup h2::before { content: "🔥 "; }
-    .cooldown h2::before { content: "🧘 "; }
-    .subtitle { color: var(--muted); font-size: .95rem; margin: 0 0 10px; }
-
-    .exercise {
-      border: 1px solid var(--border); border-radius: 14px; padding: 12px; margin: 10px 0 12px; background: #fff;
-    }
-    .exercise h3 { font-size: 1rem; margin: 0 0 8px; color: var(--fg); font-weight: 700; letter-spacing: .2px; }
-    .gif {
-      display: block; width: 100%; max-width: 380px; height: auto; border-radius: 10px;
-      border: 1px solid var(--border); margin: 6px auto 0;
-    }
-
-    .toplink { text-align: right; margin-top: 6px; }
-    .toplink a { color: var(--muted); text-decoration: none; }
-
-    .intro-text {
-      background: var(--chip); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 14px; margin: 14px 0; font-size: .95rem; line-height: 1.6;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #0b0b0b; --fg: #f4f4f5; --card: #0f1012; --border: #1f2937; --muted: #b3b8c2; --chip: #141518; }
-      header { background: #0b0b0b; border-bottom-color: var(--border); }
-      .exercise { background: #111215; }
-      .warmup { background: linear-gradient(135deg, #1a0f0a, #0f1012); }
-      .cooldown { background: linear-gradient(135deg, #0a1a0f, #0f1012); }
+    html,body{background:var(--bg);color:var(--fg);margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;line-height:1.55}
+    .wrap{max-width:980px;margin:0 auto;padding:20px 14px 64px}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:5}
+    header .inner{max-width:980px;margin:0 auto;padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
+    h1{font-size:1.1rem;margin:0;letter-spacing:.2px}
+    .note{color:var(--muted);font-size:.9rem}
+    .toc{margin:14px 0 18px;display:flex;flex-wrap:wrap;gap:6px}
+    .chip{display:inline-block;padding:6px 12px;border:1px solid var(--accent);border-radius:20px;text-decoration:none;color:var(--fg);background:var(--chip);text-align:center;box-shadow:var(--shadow);font-size:.8rem;font-weight:500;white-space:nowrap;transition:all .2s}
+    .chip:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,.1);background:var(--fg);color:var(--bg)}
+    .special-chip{background:linear-gradient(135deg,var(--accent),#ff8c42);color:#fff;border-color:var(--accent);font-weight:600}
+    .special-chip:hover{background:linear-gradient(135deg,#e55a2b,#ff8c42);color:#fff;transform:translateY(-1px)}
+    .day{border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);background:var(--card);padding:14px;margin:14px 0 20px}
+    .warmup{border-left:4px solid var(--accent);background:linear-gradient(135deg,#fff5f2,#fff)}
+    .cooldown{border-left:4px solid #4ade80;background:linear-gradient(135deg,#f0fdf4,#fff)}
+    .day h2{font-size:1.15rem;margin:2px 0 4px;color:var(--fg)}
+    .warmup h2::before{content:"🔥 "}
+    .cooldown h2::before{content:"🧘 "}
+    .subtitle{color:var(--muted);font-size:.95rem;margin:0 0 10px}
+    .exercise{border:1px solid var(--border);border-radius:14px;padding:12px;margin:10px 0 12px;background:#fff}
+    .exercise h3{font-size:1rem;margin:0 0 8px;color:var(--fg);font-weight:700;letter-spacing:.2px}
+    .gif{display:block;width:100%;max-width:380px;height:auto;border-radius:10px;border:1px solid var(--border);margin:6px auto 0}
+    .toplink{text-align:right;margin-top:6px}
+    .toplink a{color:var(--muted);text-decoration:none}
+    .intro-text{background:var(--chip);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin:14px 0;font-size:.95rem;line-height:1.6}
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0b0b0b;--fg:#f4f4f5;--card:#0f1012;--border:#1f2937;--muted:#b3b8c2;--chip:#141518}
+      header{background:#0b0b0b;border-bottom-color:var(--border)}
+      .exercise{background:#111215}
+      .warmup{background:linear-gradient(135deg,#1a0f0a,#0f1012)}
+      .cooldown{background:linear-gradient(135deg,#0a1a0f,#0f1012)}
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="inner">
-      <h1>7-Day Glute, Leg &amp; Triceps Focused Military Workout</h1>
-      <div class="note"></div>
-    </div>
-  </header>
-
-  <div class="wrap">
-    <nav class="toc" id="top">
-      <a class="chip special-chip" href="#warmup">🔥 Warm-Up</a>
-      <a class="chip" href="#day1">Day 1 – Glute Activation &amp; Strength (+ Triceps)</a>
-      <a class="chip" href="#day2">Day 2 – Core + Glutes (+ Triceps)</a>
-      <a class="chip" href="#day3">Day 3 – Quads &amp; Hamstrings</a>
-      <a class="chip" href="#day4">Day 4 – Military HIIT (Legs + Glutes)</a>
-      <a class="chip" href="#day5">Day 5 – Glute Power &amp; Endurance (+ Triceps)</a>
-      <a class="chip" href="#day6">Day 6 – Core Stability + Legs</a>
-      <a class="chip" href="#day7">Day 7 – Active Recovery</a>
-      <a class="chip special-chip" href="#cooldown">🧘 Cool-Down</a>
-    </nav>
-
-    <div class="intro-text">
-      <strong>👉 Important:</strong> Start every workout with the warm-up below, and finish with the cool-down stretches at the bottom.
-      Each day is ~30 minutes, focused on <strong>glutes, legs</strong> and with targeted <strong>triceps (“bingo wings”)</strong> on Days 1, 2 and 5.
-    </div>
-
-    <!-- WARM-UP (glute-biased) -->
-    <section class="day warmup" id="warmup">
-      <h2>Warm-Up (5–7 min)</h2>
-      <p class="subtitle">Complete this before any day's workout</p>
-
-      <div class="exercise">
-        <h3>Banded Side Walks — 1×40 steps (20/side)</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2017/10/lateral-band-walk-exercise-illustration-spotebi.gif" alt="Banded side walks">
-      </div>
-
-      <div class="exercise">
-        <h3>Standing Open The Gate — 1×30s each direction</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2016/02/standing-open-the-gate-exercise-illustration-spotebi.gif" alt="Standing Open The Gate">
-      </div>
-
-      <div class="exercise">
-        <h3>Bodyweight Squats — 1×15 reps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/squat-exercise-illustration.gif" alt="Bodyweight squats">
-      </div>
-
-      <div class="exercise">
-        <h3>Walking Lunges — 1×20 steps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/lunges-exercise-illustration.gif" alt="Walking lunges">
-      </div>
-
-      <div class="exercise">
-        <h3>Glute Bridge (activation) — 1×15 reps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/glute-bridge-exercise-illustration-spotebi.gif" alt="Glute bridge activation">
-      </div>
-
-      <div class="toplink"><a href="#top">▲ Back to top</a></div>
-    </section>
-
-    <!-- DAY 1 -->
-    <section class="day" id="day1">
-      <h2>Day 1 – Glute Activation &amp; Strength (+ Triceps)</h2>
-      <p class="subtitle">30 minutes total.</p>
-
-      <div class="exercise">
-        <h3>Bulgarian Split Squats — 3×12 reps/leg</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/bulgarian-split-squat-exercise-illustration-spotebi.gif" alt="Bulgarian split squat">
-      </div>
-
-      <div class="exercise">
-        <h3>Glute Bridges — 3×15 reps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/glute-bridge-exercise-illustration-spotebi.gif" alt="Glute bridge">
-      </div>
-
-      <div class="exercise">
-        <h3>Step-Ups (bench/chair) — 3×12 reps/leg</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/step-up-with-knee-raise-exercise-illustration-spotebi.gif" alt="Step up">
-      </div>
-
-      <div class="exercise">
-        <h3>Banded Side Steps — 3×20 steps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2017/10/lateral-band-walk-exercise-illustration-spotebi.gif" alt="Banded side steps">
-      </div>
-
-      <!-- Triceps add-on -->
-      <div class="exercise">
-        <h3>Close-Grip Push-Ups — 3×10–15</h3>
-        <img class="gif" src="https://newlife.com.cy/wp-content/uploads/2019/11/02591301-Close-Grip-Push-up_Upper-Arms_360.gif" alt="Close-grip push-up">
-      </div>
-
-      <div class="exercise">
-        <h3>Jump Squats — 30s on / 30s rest × 5</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/08/jump-squat-exercise-illustration.gif" alt="Jump squats">
-      </div>
-
-      <div class="toplink"><a href="#top">▲ Back to top</a></div>
-    </section>
-
-    <!-- DAY 2 -->
-    <section class="day" id="day2">
-      <h2>Day 2 – Core + Glutes (+ Triceps)</h2>
-      <p class="subtitle">30 minutes total.</p>
-
-      <div class="exercise">
-        <h3>Hip Thrusts — 3×12 reps</h3>
-        <img class="gif" src="https://media.post.rvohealth.io/wp-content/uploads/2020/10/hip-thrust-on-workout-bench-with-hip-thrust-machine.gif" alt="Hip thrust">
-      </div>
-
-      <div class="exercise">
-        <h3>Side Plank Hip Dips — 3×12 reps/side</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/side-plank-hip-lifts-exercise-illustration.gif" alt="Side plank hip dips">
-      </div>
-
-      <div class="exercise">
-        <h3>Fire Hydrants (banded if possible) — 3×15 reps/leg</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/fire-hydrant-exercise-illustration.gif" alt="Fire hydrant">
-      </div>
-
-      <div class="exercise">
-        <h3>Russian Twists — 3×20 reps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/04/russian-twist-exercise-illustration.gif" alt="Russian twist">
-      </div>
-
-      <!-- Triceps add-on -->
-      <div class="exercise">
-        <h3>Overhead Triceps Extensions — 3×12–15</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/dumbbell-triceps-extension-exercise-illustration.gif" alt="Overhead triceps extension">
-      </div>
-
-      <div class="exercise">
-        <h3>Mountain Climbers — 30s on / 30s rest × 5</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/mountain-climbers-exercise-illustration-spotebi.gif" alt="Mountain climbers">
-      </div>
-
-      <div class="toplink"><a href="#top">▲ Back to top</a></div>
-    </section>
-
-    <!-- DAY 3 -->
-    <section class="day" id="day3">
-      <h2>Day 3 – Quads &amp; Hamstrings</h2>
-      <p class="subtitle">30 minutes total.</p>
-
-      <div class="exercise">
-        <h3>Goblet Squats — 3×12 reps</h3>
-        <img class="gif" src="https://homeworkouts.org/wp-content/uploads/anim-dumbbell-goblet-squats.gif" alt="Goblet squat">
-      </div>
-
-      <div class="exercise">
-        <h3>Romanian Deadlifts — 3×12 reps</h3>
-        <img class="gif" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif" alt="Romanian deadlift">
-      </div>
-
-      <div class="exercise">
-        <h3>Curtsy Lunges — 3×12 reps/leg</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/curtsy-lunge-exercise-illustration.gif" alt="Curtsy lunge">
-      </div>
-
-      <div class="exercise">
-        <h3>Band Kickback — 3×15 reps/leg</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2017/11/band-kickback-exercise-illustration-spotebi.gif" alt="Band Kickback">
-      </div>
-
-      <div class="exercise">
-        <h3>Sprint in Place — 20s on / 10s rest × 8</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/run-in-place-exercise-illustration.gif" alt="Sprint in place">
-      </div>
-
-      <div class="toplink"><a href="#top">▲ Back to top</a></div>
-    </section>
-
-    <!-- DAY 4 -->
-    <section class="day" id="day4">
-      <h2>Day 4 – Military HIIT (Legs + Glutes)</h2>
-      <p class="subtitle">30 minutes total.</p>
-
-      <div class="exercise">
-        <h3>Burpees — 3×10–12 reps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/burpees-exercise-illustration.gif" alt="Burpees">
-      </div>
-
-      <div class="exercise">
-        <h3>Jump Squats — 40s on / 20s rest</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/08/jump-squat-exercise-illustration.gif" alt="Jump squats">
-      </div>
-
-      <div class="exercise">
-        <h3>Lunge Jumps — 40s on / 20s rest</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/02/jumping-lunges-exercise-illustration.gif" alt="Lunge jumps">
-      </div>
-
-      <div class="exercise">
-        <h3>Glute Bridges — 40s on / 20s rest</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/glute-bridge-exercise-illustration-spotebi.gif" alt="Glute bridge">
-      </div>
-
-      <div class="exercise">
-        <h3>Tabata Sprints — 20s sprint / 10s rest × 10</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/run-in-place-exercise-illustration.gif" alt="Tabata sprints">
-      </div>
-
-      <div class="toplink"><a href="#top">▲ Back to top</a></div>
-    </section>
-
-    <!-- DAY 5 -->
-    <section class="day" id="day5">
-      <h2>Day 5 – Glute Power &amp; Endurance (+ Triceps)</h2>
-      <p class="subtitle">30 minutes total.</p>
-
-      <div class="exercise">
-        <h3>Hip Thrusts (pause 2s at top) — 3×12 reps</h3>
-        <img class="gif" src="https://media.post.rvohealth.io/wp-content/uploads/2020/10/hip-thrust-on-workout-bench.gif" alt="Hip thrust">
-      </div>
-
-      <div class="exercise">
-        <h3>Walking Lunges — 3×20 steps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/lunges-exercise-illustration.gif" alt="Walking lunges">
-      </div>
-
-      <div class="exercise">
-        <h3>Banded Side Steps — 3×20 steps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/side-leg-raises-exercise-illustration.gif" alt="Banded side steps">
-      </div>
-
-      <div class="exercise">
-        <h3>Frog Jumps — 3×20 reps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2016/05/frog-pumps-exercise-illustration.gif" alt="Frog Jumps">
-      </div>
-
-      <!-- Triceps add-on -->
-      <div class="exercise">
-        <h3>Chair Dips — 3×10–15</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/04/tricep-dips-exercise-illustration-spotebi.gif" alt="Triceps dips on chair">
-      </div>
-
-      <div class="exercise">
-        <h3>Jump Squats — 30s on / 30s rest × 5</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/08/jump-squat-exercise-illustration.gif" alt="Jump squats">
-      </div>
-
-      <div class="toplink"><a href="#top">▲ Back to top</a></div>
-    </section>
-
-    <!-- DAY 6 -->
-    <section class="day" id="day6">
-      <h2>Day 6 – Core Stability + Legs</h2>
-      <p class="subtitle">30 minutes total.</p>
-
-      <div class="exercise">
-        <h3>Side Plank with Leg Lift — 3×10 reps/side</h3>
-        <img class="gif" src="https://www.physigraphe.com/archives/extras/free0906/Side_Plank_Leg_Raise.gif" alt="Side plank leg lift">
-      </div>
-
-      <div class="exercise">
-        <h3>Dead Bugs — 3×12 reps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/dead-bug-exercise-illustration.gif" alt="Dead bug">
-      </div>
-
-      <div class="exercise">
-        <h3>Single-Leg Glute Bridge — 3×12 reps/leg</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/single-leg-bridge-exercise-illustration.gif" alt="Single leg bridge">
-      </div>
-
-      <div class="exercise">
-        <h3>Double Pulse Squat Jump — 3×20 reps</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2017/06/double-pulse-squat-jump-exercise-illustration-spotebi.gif" alt="Double Pulse Squat Jump">
-      </div>
-
-      <div class="exercise">
-        <h3>High Knees — 30s on / 30s rest × 5</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/high-knees-exercise-illustration.gif" alt="High knees">
-      </div>
-
-      <div class="toplink"><a href="#top">▲ Back to top</a></div>
-    </section>
-
-    <!-- DAY 7 -->
-    <section class="day" id="day7">
-      <h2>Day 7 – Active Recovery</h2>
-      <p class="subtitle">~20–30 minutes, easy pace.</p>
-
-      <div class="exercise">
-        <h3>Bird-Dogs — 3×12 reps/side</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/bird-dogs-exercise-illustration.gif" alt="Bird-Dogs">
-      </div>
-
-      <div class="exercise">
-        <h3>Glute Kickbacks — 3×12 reps/leg</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/donkey-kicks-exercise-illustration.gif" alt="Glute kickbacks">
-      </div>
-
-      <div class="exercise">
-        <h3>Lunge Back Kick — 3×12 reps/leg</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2016/03/lunge-back-kick-exercise-illustration-spotebi.gif" alt="Lunge Back Kick">
-      </div>
-
-      <div class="exercise">
-        <h3>Yoga Flow — 10 min (hips & lower back)</h3>
-        <img class="gif" src="https://64.media.tumblr.com/754da1a21aa6def51ecb5f489cc76fe7/tumblr_paqamzEsEw1tdaw6ko1_640.gif" alt="Yoga Flow">
-      </div>
-
-      <div class="toplink"><a href="#top">▲ Back to top</a></div>
-    </section>
-
-    <!-- COOL-DOWN -->
-    <section class="day cooldown" id="cooldown">
-      <h2>Stretch / Cool-Down (5–10 min)</h2>
-      <p class="subtitle">Complete this after any workout</p>
-
-      <div class="exercise">
-        <h3>Pigeon Pose — 30–45s/side</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2016/01/pigeon-pose-exercise-illustration.gif" alt="Pigeon Pose">
-      </div>
-
-      <div class="exercise">
-        <h3>Hamstring Stretch — 30s/side</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/03/hamstring-stretch-exercise-illustration.gif" alt="Hamstring Stretch">
-      </div>
-
-      <div class="exercise">
-        <h3>Quad Stretch — 30s/side</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/03/quad-stretch-exercise-illustration.gif" alt="Quad Stretch">
-      </div>
-
-      <div class="exercise">
-        <h3>Child's Pose — 45–60s</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2016/01/childs-pose-balasana.jpg" alt="Child’s Pose">
-      </div>
-
-      <div class="exercise">
-        <h3>Hip Flexor Lunge Stretch — 30s/side</h3>
-        <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/03/lunge-stretch-exercise-illustration.gif" alt="Hip Flexor Lunge Stretch">
-      </div>
-
-      <div class="toplink"><a href="#top">▲ Back to top</a></div>
-    </section>
-
+<header>
+  <div class="inner">
+    <h1>7-Day Glute, Leg &amp; Triceps Focused Military Workout</h1>
+    <div class="note"></div>
   </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" id="top">
+    <a class="chip special-chip" href="#warmup">🔥 Warm-Up</a>
+    <a class="chip" href="#day1">Day 1 – Glute Activation &amp; Strength (+ Triceps)</a>
+    <a class="chip" href="#day2">Day 2 – Core + Glutes (+ Triceps)</a>
+    <a class="chip" href="#day3">Day 3 – Quads &amp; Hamstrings</a>
+    <a class="chip" href="#day4">Day 4 – Military HIIT (Legs + Glutes)</a>
+    <a class="chip" href="#day5">Day 5 – Glute Power &amp; Endurance (+ Triceps)</a>
+    <a class="chip" href="#day6">Day 6 – Core Stability + Legs</a>
+    <a class="chip" href="#day7">Day 7 – Active Recovery</a>
+    <a class="chip special-chip" href="#cooldown">🧘 Cool-Down</a>
+  </nav>
+
+  <div class="intro-text">
+    <strong>👉 Important:</strong> All moves below are taken from Spotebi’s exercise guides (Legs, Glutes & Hip Flexors, Abs & Obliques, Triceps, Biceps, Shoulders, Chest, Back) and use <strong>GIF files only</strong>.
+  </div>
+
+  <!-- WARM-UP -->
+  <section class="day warmup" id="warmup">
+    <h2>Warm-Up (5–7 min)</h2>
+    <p class="subtitle">Complete this before any day's workout</p>
+
+    <div class="exercise">
+      <h3>Jumping Jacks — 1×45s</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/jumping-jacks-exercise-illustration.gif" alt="Jumping Jacks">
+    </div>
+
+    <div class="exercise">
+      <h3>Hip Circles — 1×30s each direction</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/hip-circles-exercise-illustration.gif" alt="Hip Circles">
+    </div>
+
+    <div class="exercise">
+      <h3>Bodyweight Squats — 1×15 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/squat-exercise-illustration.gif" alt="Bodyweight Squat">
+    </div>
+
+    <div class="exercise">
+      <h3>Walking Lunges — 1×20 steps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/lunges-exercise-illustration.gif" alt="Walking Lunges">
+    </div>
+
+    <div class="exercise">
+      <h3>Glute Bridge (activation) — 1×15 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/glute-bridge-exercise-illustration-spotebi.gif" alt="Glute Bridge">
+    </div>
+
+    <div class="toplink"><a href="#top">▲ Back to top</a></div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="day" id="day1">
+    <h2>Day 1 – Glute Activation &amp; Strength (+ Triceps)</h2>
+    <p class="subtitle">30 minutes total.</p>
+
+    <div class="exercise">
+      <h3>Bulgarian Split Squats — 3×12 reps/leg</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/bulgarian-split-squat-exercise-illustration-spotebi.gif" alt="Bulgarian Split Squat">
+    </div>
+
+    <div class="exercise">
+      <h3>Glute Bridges — 3×15 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/glute-bridge-exercise-illustration-spotebi.gif" alt="Glute Bridge">
+    </div>
+
+    <div class="exercise">
+      <h3>Step-Ups (bench/chair) — 3×12 reps/leg</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/step-up-with-knee-raise-exercise-illustration-spotebi.gif" alt="Step-Ups">
+    </div>
+
+    <div class="exercise">
+      <h3>Banded Side Steps — 3×20 steps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/side-leg-raises-exercise-illustration.gif" alt="Side Leg Raises (banded steps)">
+    </div>
+
+    <!-- Triceps add-on -->
+    <div class="exercise">
+      <h3>Close-Grip Push-Ups — 3×10–15</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/03/close-grip-push-up-exercise-illustration.gif" alt="Close-Grip Push-Ups">
+    </div>
+
+    <div class="exercise">
+      <h3>Jump Squats — 30s on / 30s rest × 5</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/08/jump-squat-exercise-illustration.gif" alt="Jump Squats">
+    </div>
+
+    <div class="toplink"><a href="#top">▲ Back to top</a></div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="day" id="day2">
+    <h2>Day 2 – Core + Glutes (+ Triceps)</h2>
+    <p class="subtitle">30 minutes total.</p>
+
+    <div class="exercise">
+      <h3>Hip Thrusts — 3×12 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/hip-thrust-exercise-illustration.gif" alt="Hip Thrust">
+    </div>
+
+    <div class="exercise">
+      <h3>Side Plank Hip Dips — 3×12 reps/side</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/side-plank-hip-lifts-exercise-illustration.gif" alt="Side Plank Hip Dips">
+    </div>
+
+    <div class="exercise">
+      <h3>Fire Hydrants — 3×15 reps/leg</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/fire-hydrant-exercise-illustration.gif" alt="Fire Hydrants">
+    </div>
+
+    <div class="exercise">
+      <h3>Russian Twists — 3×20 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/04/russian-twist-exercise-illustration.gif" alt="Russian Twists">
+    </div>
+
+    <!-- Triceps add-on -->
+    <div class="exercise">
+      <h3>Overhead Triceps Extensions — 3×12–15</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/04/overhead-triceps-extension-exercise-illustration.gif" alt="Overhead Triceps Extension">
+    </div>
+
+    <div class="exercise">
+      <h3>Mountain Climbers — 30s on / 30s rest × 5</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/mountain-climbers-exercise-illustration-spotebi.gif" alt="Mountain Climbers">
+    </div>
+
+    <div class="toplink"><a href="#top">▲ Back to top</a></div>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="day" id="day3">
+    <h2>Day 3 – Quads &amp; Hamstrings</h2>
+    <p class="subtitle">30 minutes total.</p>
+
+    <div class="exercise">
+      <h3>Sumo Squats — 3×12 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/sumo-squat-exercise-illustration.gif" alt="Sumo Squat">
+    </div>
+
+    <div class="exercise">
+      <h3>Cossack Squats — 3×10 reps/side</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/cossack-squat-exercise-illustration.gif" alt="Cossack Squat">
+    </div>
+
+    <div class="exercise">
+      <h3>Curtsy Lunges — 3×12 reps/leg</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/curtsy-lunge-exercise-illustration.gif" alt="Curtsy Lunge">
+    </div>
+
+    <div class="exercise">
+      <h3>Donkey Kicks — 3×15 reps/leg</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/donkey-kicks-exercise-illustration.gif" alt="Donkey Kicks">
+    </div>
+
+    <div class="exercise">
+      <h3>Sprint in Place — 20s on / 10s rest × 8</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/run-in-place-exercise-illustration.gif" alt="Run in Place">
+    </div>
+
+    <div class="toplink"><a href="#top">▲ Back to top</a></div>
+  </section>
+
+  <!-- DAY 4 -->
+  <section class="day" id="day4">
+    <h2>Day 4 – Military HIIT (Legs + Glutes)</h2>
+    <p class="subtitle">30 minutes total.</p>
+
+    <div class="exercise">
+      <h3>Burpees — 3×10–12 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/burpees-exercise-illustration.gif" alt="Burpees">
+    </div>
+
+    <div class="exercise">
+      <h3>Squat Kickback — 40s on / 20s rest</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/squat-kickback-exercise-illustration.gif" alt="Squat Kickback">
+    </div>
+
+    <div class="exercise">
+      <h3>Switch Lunges (Jump Lunges) — 40s on / 20s rest</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/08/switch-lunges-exercise-illustration.gif" alt="Switch Lunges">
+    </div>
+
+    <div class="exercise">
+      <h3>Glute Bridges — 40s on / 20s rest</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/glute-bridge-exercise-illustration-spotebi.gif" alt="Glute Bridge">
+    </div>
+
+    <div class="exercise">
+      <h3>Tabata Sprints — 20s sprint / 10s rest × 10</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/run-in-place-exercise-illustration.gif" alt="Tabata Sprints">
+    </div>
+
+    <div class="toplink"><a href="#top">▲ Back to top</a></div>
+  </section>
+
+  <!-- DAY 5 -->
+  <section class="day" id="day5">
+    <h2>Day 5 – Glute Power &amp; Endurance (+ Triceps)</h2>
+    <p class="subtitle">30 minutes total.</p>
+
+    <div class="exercise">
+      <h3>Hip Thrusts (2s pause at top) — 3×12 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/hip-thrust-exercise-illustration.gif" alt="Hip Thrust">
+    </div>
+
+    <div class="exercise">
+      <h3>Walking Lunges — 3×20 steps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/lunges-exercise-illustration.gif" alt="Walking Lunges">
+    </div>
+
+    <div class="exercise">
+      <h3>Lateral Band Walks — 3×20 steps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/side-leg-raises-exercise-illustration.gif" alt="Lateral Band Walks">
+    </div>
+
+    <div class="exercise">
+      <h3>Frog Pumps — 3×20 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2016/05/frog-pumps-exercise-illustration.gif" alt="Frog Pumps">
+    </div>
+
+    <!-- Triceps add-on -->
+    <div class="exercise">
+      <h3>Triceps Dips (Bench/Chair) — 3×10–15</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/04/triceps-dips-exercise-illustration.gif" alt="Triceps Dips">
+    </div>
+
+    <div class="exercise">
+      <h3>Jump Squats — 30s on / 30s rest × 5</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/08/jump-squat-exercise-illustration.gif" alt="Jump Squats">
+    </div>
+
+    <div class="toplink"><a href="#top">▲ Back to top</a></div>
+  </section>
+
+  <!-- DAY 6 -->
+  <section class="day" id="day6">
+    <h2>Day 6 – Core Stability + Legs</h2>
+    <p class="subtitle">30 minutes total.</p>
+
+    <div class="exercise">
+      <h3>Side Plank with Leg Lift — 3×10 reps/side</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/side-leg-lifts-plank-exercise-illustration.gif" alt="Side Plank Leg Lift">
+    </div>
+
+    <div class="exercise">
+      <h3>Dead Bugs — 3×12 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/05/dead-bug-exercise-illustration.gif" alt="Dead Bugs">
+    </div>
+
+    <div class="exercise">
+      <h3>Single-Leg Glute Bridge — 3×12 reps/leg</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/single-leg-bridge-exercise-illustration.gif" alt="Single-Leg Glute Bridge">
+    </div>
+
+    <div class="exercise">
+      <h3>Squat Pulses — 3×20 reps</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/squat-pulse-exercise-illustration.gif" alt="Squat Pulses">
+    </div>
+
+    <div class="exercise">
+      <h3>High Knees — 30s on / 30s rest × 5</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/high-knees-exercise-illustration.gif" alt="High Knees">
+    </div>
+
+    <div class="toplink"><a href="#top">▲ Back to top</a></div>
+  </section>
+
+  <!-- DAY 7 -->
+  <section class="day" id="day7">
+    <h2>Day 7 – Active Recovery</h2>
+    <p class="subtitle">~20–30 minutes, easy pace.</p>
+
+    <div class="exercise">
+      <h3>Bird-Dogs — 3×12 reps/side</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/10/bird-dogs-exercise-illustration.gif" alt="Bird-Dogs">
+    </div>
+
+    <div class="exercise">
+      <h3>Glute Kickbacks — 3×12 reps/leg</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/01/donkey-kicks-exercise-illustration.gif" alt="Glute Kickbacks">
+    </div>
+
+    <div class="exercise">
+      <h3>Lunge to Back Kick — 3×12 reps/leg</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2016/02/lunge-kick-back-exercise-illustration.gif" alt="Lunge to Back Kick">
+    </div>
+
+    <div class="exercise">
+      <h3>Yoga Flow — 10 min (hips & lower back)</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2016/01/sun-salutation-exercise-illustration.gif" alt="Sun Salutation Flow">
+    </div>
+
+    <div class="toplink"><a href="#top">▲ Back to top</a></div>
+  </section>
+
+  <!-- COOL-DOWN -->
+  <section class="day cooldown" id="cooldown">
+    <h2>Stretch / Cool-Down (5–10 min)</h2>
+    <p class="subtitle">Complete this after any workout</p>
+
+    <div class="exercise">
+      <h3>Pigeon Pose — 30–45s/side</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2016/01/pigeon-pose-exercise-illustration.gif" alt="Pigeon Pose">
+    </div>
+
+    <div class="exercise">
+      <h3>Hamstring Stretch — 30s/side</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/03/hamstring-stretch-exercise-illustration.gif" alt="Hamstring Stretch">
+    </div>
+
+    <div class="exercise">
+      <h3>Quad Stretch — 30s/side</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/03/quad-stretch-exercise-illustration.gif" alt="Quad Stretch">
+    </div>
+
+    <div class="exercise">
+      <h3>Cobra Stretch — 30–45s</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2014/11/ab-stretch-exercise-illustration.gif" alt="Cobra/Ab Stretch">
+    </div>
+
+    <div class="exercise">
+      <h3>Hip Flexor Lunge Stretch — 30s/side</h3>
+      <img class="gif" src="https://spotebi.com/wp-content/uploads/2015/03/lunge-stretch-exercise-illustration.gif" alt="Hip Flexor Lunge Stretch">
+    </div>
+
+    <div class="toplink"><a href="#top">▲ Back to top</a></div>
+  </section>
+
+</div>
 </body>
 </html>
